@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "NON1z6Oexn1AKgG7E9Z14MPcF74t6CW/H5CGoPlpFWlN3e+/H/eXorlO57W1OrtCBblaXgey5EoTE3rXHc3XLg==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Celeste\\Mods\\TyporiumUtilities\\Source\\TyporiumUtilities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tehul\\.nuget\\packages\\bepinex.assemblypublicizer.msbuild\\0.4.1\\bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.backports\\1.0.1\\monomod.backports.1.0.1.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.core\\1.0.1\\monomod.core.1.0.1.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.ilhelpers\\1.0.0\\monomod.ilhelpers.1.0.0.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.patcher\\25.0.0-prerelease.2\\monomod.patcher.25.0.0-prerelease.2.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.runtimedetour\\25.0.2\\monomod.runtimedetour.25.0.2.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.utils\\25.0.3\\monomod.utils.25.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
