@@ -1,0 +1,12 @@
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\bin\Debug\net7.0\TyporiumUtilities.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\bin\Debug\net7.0\TyporiumUtilities.dll
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\bin\Debug\net7.0\TyporiumUtilities.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.dll
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\refint\TyporiumUtilities.dll
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\ref\TyporiumUtilities.dll

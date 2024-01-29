@@ -1,0 +1,124 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TyporiumUtilities/1.0.0": {
+        "dependencies": {
+          "BepInEx.AssemblyPublicizer.MSBuild": "0.4.1",
+          "MonoMod.Patcher": "25.0.0-prerelease.2",
+          "MonoMod.RuntimeDetour": "25.0.2"
+        },
+        "runtime": {
+          "TyporiumUtilities.dll": {}
+        }
+      },
+      "BepInEx.AssemblyPublicizer.MSBuild/0.4.1": {},
+      "Mono.Cecil/0.11.4": {},
+      "MonoMod.Backports/1.0.1": {
+        "dependencies": {
+          "MonoMod.ILHelpers": "1.0.0"
+        }
+      },
+      "MonoMod.Core/1.0.1": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoMod.Backports": "1.0.1",
+          "MonoMod.ILHelpers": "1.0.0",
+          "MonoMod.Utils": "25.0.3"
+        }
+      },
+      "MonoMod.ILHelpers/1.0.0": {},
+      "MonoMod.Patcher/25.0.0-prerelease.2": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoMod.Backports": "1.0.1",
+          "MonoMod.ILHelpers": "1.0.0",
+          "MonoMod.Utils": "25.0.3"
+        }
+      },
+      "MonoMod.RuntimeDetour/25.0.2": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoMod.Backports": "1.0.1",
+          "MonoMod.Core": "1.0.1",
+          "MonoMod.ILHelpers": "1.0.0",
+          "MonoMod.Utils": "25.0.3"
+        }
+      },
+      "MonoMod.Utils/25.0.3": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoMod.Backports": "1.0.1",
+          "MonoMod.ILHelpers": "1.0.0"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TyporiumUtilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BepInEx.AssemblyPublicizer.MSBuild/0.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bbTaXa0CKDuap0vDR+NkSz9crQIYhMvIbId9njUajYZAcr8OTuVcyiSlexzeGxfkYAbbn0z9YpgbIoeyHADXqA==",
+      "path": "bepinex.assemblypublicizer.msbuild/0.4.1",
+      "hashPath": "bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512"
+    },
+    "Mono.Cecil/0.11.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IC1h5g0NeJGHIUgzM1P82ld57knhP0IcQfrYITDPXlNpMYGUrsG5TxuaWTjaeqDNQMBDNZkB8L0rBnwsY6JHuQ==",
+      "path": "mono.cecil/0.11.4",
+      "hashPath": "mono.cecil.0.11.4.nupkg.sha512"
+    },
+    "MonoMod.Backports/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LWIzLvkkmXlucCWL9gg17WBHhmw9hBpMjiFFBfVKJ4Cova6BLoLqjT+yjZM7RW70ezXJ/ry7zsicvvTV67Hxnw==",
+      "path": "monomod.backports/1.0.1",
+      "hashPath": "monomod.backports.1.0.1.nupkg.sha512"
+    },
+    "MonoMod.Core/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VL7d4L+/JU9LR1eXe+Wo2NquCzPExeMorBe23S/7Rn8cydb4Ex+wMpFhnlUfwT9jbLV/TiNbaVGJtR73fBwVCw==",
+      "path": "monomod.core/1.0.1",
+      "hashPath": "monomod.core.1.0.1.nupkg.sha512"
+    },
+    "MonoMod.ILHelpers/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dTjGA+dYl7W5yQ0oG/Wr57tsa+ueoFUrwPtz9MZF9iheun4n70u7lge52F8UJi9i0zMHRfS2mAY6+nPuRZHQyQ==",
+      "path": "monomod.ilhelpers/1.0.0",
+      "hashPath": "monomod.ilhelpers.1.0.0.nupkg.sha512"
+    },
+    "MonoMod.Patcher/25.0.0-prerelease.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EPIKCkdLZqkt/xN9z0w0UBUPozG8Bpi+rg3keuX6n/8KaPhd2kxgJC2ggSbaxeQ5iE+6k7z8n5Pf7FMww1OKbQ==",
+      "path": "monomod.patcher/25.0.0-prerelease.2",
+      "hashPath": "monomod.patcher.25.0.0-prerelease.2.nupkg.sha512"
+    },
+    "MonoMod.RuntimeDetour/25.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7HuQGIMMtu9q0PEnJYl7xztT14TmGSP56B4unBYWuZvPgWCZWX9hGOmTm7zDYhwMsjUQcCTl9iiqOlI1+NHVLg==",
+      "path": "monomod.runtimedetour/25.0.2",
+      "hashPath": "monomod.runtimedetour.25.0.2.nupkg.sha512"
+    },
+    "MonoMod.Utils/25.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+/lFnYwNB728wnqAzkzCny88Ik++dueJiDAE+mRuMQf8NYHvWhNgLyZQ1VTN4x8iTelQGL1SzaY0I2bBPNNAog==",
+      "path": "monomod.utils/25.0.3",
+      "hashPath": "monomod.utils.25.0.3.nupkg.sha512"
+    }
+  }
+}
