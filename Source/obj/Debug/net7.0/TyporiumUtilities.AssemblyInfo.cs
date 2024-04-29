@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TyporiumUtilities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19d8dfeebfe982e7bc7e8f52d3b767d35e5c8b5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TyporiumUtilities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TyporiumUtilities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,21 +16,17 @@ namespace Celeste.Mod.TyporiumUtilities {
 
         public TyporiumUtilitiesModule() {
             Instance = this;
-#if DEBUG
-            // debug builds use verbose logging
-            Logger.SetLogLevel(nameof(TyporiumUtilitiesModule), LogLevel.Verbose);
-#else
-            // release builds use info logging to reduce spam in log files
             Logger.SetLogLevel(nameof(TyporiumUtilitiesModule), LogLevel.Info);
-#endif
         }
 
         public override void Load() {
-            // TODO: apply any hooks that should always be active
+            TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Load();
+            TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Load();
         }
 
         public override void Unload() {
-            // TODO: unapply any hooks applied in Load()
+            TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Unload();
+            TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Unload();
         }
     }
 }

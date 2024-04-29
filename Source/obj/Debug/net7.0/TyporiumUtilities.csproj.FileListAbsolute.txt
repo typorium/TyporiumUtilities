@@ -10,3 +10,4 @@ C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Sou
 C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\refint\TyporiumUtilities.dll
 C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.pdb
 C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\ref\TyporiumUtilities.dll
+C:\Program Files (x86)\Steam\steamapps\common\Celeste\Mods\TyporiumUtilities\Source\obj\Debug\net7.0\TyporiumUtilities.sourcelink.json

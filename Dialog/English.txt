@@ -1,0 +1,6 @@
+##########################################
+# SAVEFILE SEARCHER
+##########################################
+
+TyporiumUtilities_OuiFileSearchBar_BigTitle= Search
+TyporiumUtilities_OuiFileSearchBar_Explanation= Save File Searcher

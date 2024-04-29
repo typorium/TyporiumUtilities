@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NON1z6Oexn1AKgG7E9Z14MPcF74t6CW/H5CGoPlpFWlN3e+/H/eXorlO57W1OrtCBblaXgey5EoTE3rXHc3XLg==",
+  "dgSpecHash": "OHnt8rC6XnTebB9xcRUW+N9jSLeC0HWmtYbuNWx7CmFP4cN4WySeFtGp1RM37sJMvlg3clbSyhvP7Bzx6V+I/g==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Celeste\\Mods\\TyporiumUtilities\\Source\\TyporiumUtilities.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,10 @@
     "C:\\Users\\tehul\\.nuget\\packages\\monomod.ilhelpers\\1.0.0\\monomod.ilhelpers.1.0.0.nupkg.sha512",
     "C:\\Users\\tehul\\.nuget\\packages\\monomod.patcher\\25.0.0-prerelease.2\\monomod.patcher.25.0.0-prerelease.2.nupkg.sha512",
     "C:\\Users\\tehul\\.nuget\\packages\\monomod.runtimedetour\\25.0.2\\monomod.runtimedetour.25.0.2.nupkg.sha512",
-    "C:\\Users\\tehul\\.nuget\\packages\\monomod.utils\\25.0.3\\monomod.utils.25.0.3.nupkg.sha512"
+    "C:\\Users\\tehul\\.nuget\\packages\\monomod.utils\\25.0.3\\monomod.utils.25.0.3.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\tehul\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
   ],
   "logs": []
 }
