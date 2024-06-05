@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.Xna.Framework;
 
 namespace Celeste.Mod.TyporiumUtilities {
     public class TyporiumUtilitiesModule : EverestModule {
@@ -19,10 +18,12 @@ namespace Celeste.Mod.TyporiumUtilities {
             Logger.SetLogLevel(nameof(TyporiumUtilitiesModule), LogLevel.Info);
         }
 
+
         public override void Load() {
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Load();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Load();
         }
+
 
         public override void Unload() {
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Unload();

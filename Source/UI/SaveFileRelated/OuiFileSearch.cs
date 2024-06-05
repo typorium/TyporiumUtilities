@@ -228,9 +228,7 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
                 this.saves_menu.Selection = -1;
             }
 
-            bool flag1 = (this.searching && this.search_text.Length == 0 && MInput.Keyboard.Pressed(Keys.Delete) );
-            bool flag2 = (!this.searching && Input.MenuCancel.Pressed);
-            if( flag1 || flag2 )
+            if(!this.searching && Input.MenuCancel.Pressed)
             {
                 if (this.Selected && this.Focused)
                 {
@@ -301,7 +299,7 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
         {
             orig(self);
 
-            if (Input.Pause.Pressed || Input.ESC.Pressed)
+            if (TyporiumUtilitiesModule.Settings.UI_SaveFileRelated_OuiFileSearch_Open)
             {
                 if (self.Selected && self.Focused) {
                     Audio.Play("event:/ui/main/whoosh_large_in");
