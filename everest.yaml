@@ -1,5 +1,5 @@
 - Name: TyporiumUtilities
-  Version: 0.2.0
+  Version: 0.2.1
   DLL: Code/TyporiumUtilities.dll
   Dependencies:
     - Name: EverestCore

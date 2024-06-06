@@ -1,4 +1,5 @@
 ﻿using System;
+using Celeste.Mod.TyporiumUtilities.States;
 
 namespace Celeste.Mod.TyporiumUtilities {
     public class TyporiumUtilitiesModule : EverestModule {
@@ -22,12 +23,18 @@ namespace Celeste.Mod.TyporiumUtilities {
         public override void Load() {
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Load();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Load();
+
+            Everest.Events.Level.OnLoadLevel += StateManager.OnLoadLevel;
+            Everest.Events.Level.OnExit += StateManager.OnExit;
         }
 
 
         public override void Unload() {
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Unload();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Unload();
+
+            Everest.Events.Level.OnLoadLevel -= StateManager.OnLoadLevel;
+            Everest.Events.Level.OnExit -= StateManager.OnExit;
         }
     }
 }

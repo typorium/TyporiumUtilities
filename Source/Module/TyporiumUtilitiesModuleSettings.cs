@@ -3,8 +3,13 @@ namespace Celeste.Mod.TyporiumUtilities {
 
 
         [SettingName("TyporiumUtilities_Settings_UI_SaveFileRelated_OuiFileSearch_Open")]
-        [DefaultButtonBinding(Microsoft.Xna.Framework.Input.Buttons.Start, Microsoft.Xna.Framework.Input.Keys.Escape)]
+        [DefaultButtonBinding(0, Microsoft.Xna.Framework.Input.Keys.Escape)]
         public ButtonBinding UI_SaveFileRelated_OuiFileSearch_Open { get; set;}
+
+
+        [SettingName("TyporiumUtilities_Settings_Gameplay_States_ChangeState")]
+        [DefaultButtonBinding(0, 0)]
+        public ButtonBinding Gameplay_States_ChangeState { get; set;}
             
     }
 }

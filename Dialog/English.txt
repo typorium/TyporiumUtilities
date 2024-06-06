@@ -3,7 +3,7 @@
 ##########################################
 
 TyporiumUtilities_Settings_UI_SaveFileRelated_OuiFileSearch_Open= Open File Search Menu
-TyporiumUtilities_Settings_GlobalStates_ViewerMode_Activate= Activate Viewer Mode
+TyporiumUtilities_Settings_Gameplay_States_ChangeState= Change Viewing State
 
 
 ##########################################
