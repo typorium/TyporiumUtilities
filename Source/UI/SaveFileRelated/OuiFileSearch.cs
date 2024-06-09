@@ -111,42 +111,49 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
         public void OnTextInput(char character)
         {
 
-            if (this.searching)
+            // If isn't currently searching for a savefile, skip
+            if (!this.searching)
             {
-                if (character == '\r')
+                return;
+            }
+
+            // Carriage return
+            if (character == '\r')
+            {
+                return;
+            }
+
+            // If a character is deleted (A.K.A backspace character)
+            else if (character == '\b')
+            {
+                if (this.search_text.Length > 0)
                 {
-                    return;
+                    this.search_text = this.search_text.Substring(0, this.search_text.Length - 1);
+                    this.slots = this.GetVerifiedSlots(this.search_text);
                 }
+            }
 
-                else if (character == '\b')
+            // If CTRL is held, skip input
+            else if (char.IsControl(character))
+            {
+                return;
+            }
+
+            // Else, add character to searchbar
+            else
+            {
+                if (this.search_text.Length < savefile_name_length_max)
                 {
-                    if (this.search_text.Length > 0)
-                    {
-                        this.search_text = this.search_text.Substring(0, this.search_text.Length - 1);
-                        this.slots = this.GetVerifiedSlots(this.search_text);
-                    }
-                }
+                    this.search_text += character.ToString();
+                    Audio.Play("event:/ui/main/rename_entry_char");
 
-                else if (char.IsControl(character))
-                {
-                    return;
-                }
-
-                else
-                {
-                    if (this.search_text.Length < savefile_name_length_max)
-                    {
-                        this.search_text += character.ToString();
-                        Audio.Play("event:/ui/main/rename_entry_char");
-
-                        this.slots = this.GetVerifiedSlots(this.search_text);
-                    }
+                    this.slots = this.GetVerifiedSlots(this.search_text);
                 }
             }
         }
 
 
-        // Render the menus
+        // Render the searchbar
         public override void Render()
         {
             base.Render();
@@ -180,6 +187,7 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
         public override void Update()
         {
 
+            // Switches to the right menu based off current inputs
             if (this.searching && Input.MenuRight.Pressed)
             {
                 if ( !(this.slots.Length <= 0) )
@@ -197,8 +205,10 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
                 this.saves_menu.Focused = false;
             }
 
+            // Entity update
             base.Update();
 
+            // Menu update (to match current verified savefiles)
             this.menu.Position.X = (Engine.Width / 2) + this.Position.X - margin_offset;
             this.menu.Position.Y = this.Position.Y - 50;
 
@@ -206,6 +216,7 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
 
             this.saves_menu.Clear();
 
+            // If a button is clicked, go to the right savefile
             for(int i = 0; i < this.slots.Length; i++)
             {
                 TextMenu.Button button = new TextMenu.Button(this.slots[i].Name);
@@ -222,12 +233,14 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile {
                 this.saves_menu.Add( button );
             }
 
+            // If searching, unselect savefiles
             if (this.searching)
             {
                 this.saves_menu.Selection = -1;
             }
 
-            if(!this.searching && Input.MenuCancel.Pressed)
+            // Press cancel without any text to return to savefile OUI
+            if(this.search_text.Length < 0 && Input.MenuCancel.Pressed)
             {
                 if (this.Selected && this.Focused)
                 {

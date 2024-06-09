@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Monocle;
 
 namespace Celeste.Mod.TyporiumUtilities.States {
 
@@ -9,16 +10,11 @@ namespace Celeste.Mod.TyporiumUtilities.States {
 
         public NormalState() : base()
         {
+
+            // Display informations
             this.SetStateName("Normal");
             this.SetTextColor(Color.White);
-        }
 
-
-        public override void Reset()
-        {
-            base.Reset();
-
-            Logger.Log(LogLevel.Info, "typoporin", "changed to" + this.GetStateName());
         }
 
 

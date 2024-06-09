@@ -21,17 +21,23 @@ namespace Celeste.Mod.TyporiumUtilities {
 
 
         public override void Load() {
+
+            // SaveFile OUI Related
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Load();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Load();
-
+            
+            // Gameplay State Related
             TyporiumUtilities.States.StateManager.Load();
         }
 
 
         public override void Unload() {
+            
+            // SaveFile OUI Related
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Unload();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Unload();
 
+            // Gameplay State Related
             TyporiumUtilities.States.StateManager.Unload();
         }
     }

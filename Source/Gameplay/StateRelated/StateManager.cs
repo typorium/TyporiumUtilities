@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Monocle;
 
@@ -68,6 +69,7 @@ namespace Celeste.Mod.TyporiumUtilities.States {
         public void Reset()
         {
             this.current_state = 0;
+            this.GetCurrentState().Reset();
 
             this.draw_state_text = false;
             this.time_until = TEXT_DISPLAY_TIME;
@@ -78,6 +80,7 @@ namespace Celeste.Mod.TyporiumUtilities.States {
         public void SwitchNextState()
         {
             this.GetCurrentState().Switched();
+            (Scene as Level).Remove(this.GetCurrentState());
 
             this.current_state++;
             if (this.current_state == states.Length){
@@ -85,6 +88,7 @@ namespace Celeste.Mod.TyporiumUtilities.States {
             }
 
             this.GetCurrentState().Reset();
+            (Scene as Level).Add(this.GetCurrentState());
 
             this.draw_state_text = true;
             this.time_until = TEXT_DISPLAY_TIME;
@@ -110,6 +114,7 @@ namespace Celeste.Mod.TyporiumUtilities.States {
             shared_instance.Reset();
 
             level.Add(shared_instance);
+            level.Add(shared_instance.GetCurrentState());
         }
 
         public static void OnExit(Level level, LevelExit exit, LevelExit.Mode mode, Session session, HiresSnow snow)
@@ -123,13 +128,24 @@ namespace Celeste.Mod.TyporiumUtilities.States {
         {
             base.Update();
 
-            this.GetCurrentState().Update();
+            // OffUpdates for each state which aren't active
+            int states_count = states.Count();
+            for (int i = 0; i < states_count; i++)
+            {
+                if (this.current_state == i)
+                {
+                    continue;
+                }
+                states[i].OffUpdate();
+            }
 
+            // If change state bind is pressed, switch
             if (TyporiumUtilitiesModule.Settings.Gameplay_States_ChangeState.Pressed)
             {
                 this.SwitchNextState();
             }
 
+            // Check if the state's name should be displayed
             if (this.draw_state_text)
             {
                 this.time_until -= Engine.DeltaTime;
@@ -151,23 +167,21 @@ namespace Celeste.Mod.TyporiumUtilities.States {
             // If not drawing
             if (!this.draw_state_text) {return;}
 
-            // Renders state
-            this.GetCurrentState().Render();
-
-            // Rendering runtime
+            // Get the state's name
             string text = this.GetCurrentState().GetStateName();
 
+            // Calculates the display position
             int margin_x = 10;
             int margin_y = (int)(Engine.Height - ActiveFont.HeightOf(text) - margin_x);
-            
-            // Drawing
+
+            // Draws
             ActiveFont.DrawOutline(
                 text,
                 new Vector2(margin_x, margin_y),
                 Vector2.Zero,
                 Vector2.One,
                 this.GetCurrentState().GetTextColor(),
-                3,
+                2 ,
                 Color.Black
             );
         }

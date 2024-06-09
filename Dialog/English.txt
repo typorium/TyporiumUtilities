@@ -1,14 +1,17 @@
 ##########################################
-# SETTINGS
-##########################################
-
-TyporiumUtilities_Settings_UI_SaveFileRelated_OuiFileSearch_Open= Open File Search Menu
-TyporiumUtilities_Settings_Gameplay_States_ChangeState= Change Viewing State
-
-
-##########################################
 # SAVEFILE SEARCHER
 ##########################################
 
+TyporiumUtilities_Settings_UI_SaveFileRelated_OuiFileSearch_Open= Open File Search Menu
+
 TyporiumUtilities_OuiFileSearchBar_BigTitle= Search
 TyporiumUtilities_OuiFileSearchBar_Explanation= Save File Searcher
+
+
+
+##########################################
+# GAMEPLAY STATES
+##########################################
+
+TyporiumUtilities_Settings_Gameplay_States_ChangeState= Change Viewing State
+TyporiumUtilities_Settings_Gameplay_States_Viewer_HitboxTrailInSecond= Hitbox Trail Size
