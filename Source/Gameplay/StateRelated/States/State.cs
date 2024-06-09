@@ -5,6 +5,7 @@ using Monocle;
 namespace Celeste.Mod.TyporiumUtilities.States {
 
 
+    [Tracked(true)]
     public class State : Entity
     {
      
@@ -45,6 +46,11 @@ namespace Celeste.Mod.TyporiumUtilities.States {
 
         public virtual void Reset()
         {}
+
+
+        public virtual void Switched()
+        {
+        }
     }
 
 }

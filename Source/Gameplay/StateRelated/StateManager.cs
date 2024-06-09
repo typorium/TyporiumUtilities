@@ -4,16 +4,17 @@ using Monocle;
 
 namespace Celeste.Mod.TyporiumUtilities.States {
 
-
+    
     public class StateManager : Entity
     {
 
         // Shared instance
-        static StateManager shared_instance = null;
+        public static StateManager shared_instance = null;
 
         // All possible states
         static State[] states = [
-            new NormalState()
+            new NormalState(),
+            new ViewerState()
         ];
 
         // Current state
@@ -23,6 +24,30 @@ namespace Celeste.Mod.TyporiumUtilities.States {
         const float TEXT_DISPLAY_TIME = 2f;
         bool draw_state_text = false;
         float time_until = 0f;
+
+
+        public static void Load()
+        {
+
+            // Loading general
+            Everest.Events.Level.OnLoadLevel += StateManager.OnLoadLevel;
+            Everest.Events.Level.OnExit += StateManager.OnExit;
+
+            // Viewer State
+            ViewerState.Load();
+        }
+
+
+        public static void Unload()
+        {
+
+            // Unloading general
+            Everest.Events.Level.OnLoadLevel -= StateManager.OnLoadLevel;
+            Everest.Events.Level.OnExit -= StateManager.OnExit;
+
+            // View State
+            ViewerState.Unload();
+        }
         
 
         // Constructor
@@ -31,6 +56,8 @@ namespace Celeste.Mod.TyporiumUtilities.States {
 
             // Tags
             this.AddTag(Tags.HUD);
+            this.AddTag(Tags.TransitionUpdate);
+            this.AddTag(Tags.Persistent);
             
             // Current State
             this.current_state = 0;
@@ -50,6 +77,8 @@ namespace Celeste.Mod.TyporiumUtilities.States {
         // Changes state
         public void SwitchNextState()
         {
+            this.GetCurrentState().Switched();
+
             this.current_state++;
             if (this.current_state == states.Length){
                 this.current_state = 0;

@@ -24,8 +24,7 @@ namespace Celeste.Mod.TyporiumUtilities {
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Load();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Load();
 
-            Everest.Events.Level.OnLoadLevel += StateManager.OnLoadLevel;
-            Everest.Events.Level.OnExit += StateManager.OnExit;
+            TyporiumUtilities.States.StateManager.Load();
         }
 
 
@@ -33,8 +32,7 @@ namespace Celeste.Mod.TyporiumUtilities {
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiFileSearch.Unload();
             TyporiumUtilities.UI.SaveFile.TyporiumUtilities_OuiSaveFileStatsViewer.Unload();
 
-            Everest.Events.Level.OnLoadLevel -= StateManager.OnLoadLevel;
-            Everest.Events.Level.OnExit -= StateManager.OnExit;
+            TyporiumUtilities.States.StateManager.Unload();
         }
     }
 }
