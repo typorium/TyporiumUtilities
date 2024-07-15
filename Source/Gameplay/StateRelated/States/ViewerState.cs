@@ -18,7 +18,7 @@ namespace Celeste.Mod.TyporiumUtilities.States {
 
         // Player Related
         static List<Collider> player_positions = new List<Collider>();
-        static Color[] player_positions_color = {Color.Yellow, Color.Blue, Color.Red};
+        static Color[] player_positions_color = {Color.YellowGreen, Color.Blue, Color.Red};
         static int PLAYER_POSITIONS_MAXCOUNT = 60 * TyporiumUtilitiesModule.Settings.Gameplay_States_Viewer_HitboxTrailInSecond;
 
 

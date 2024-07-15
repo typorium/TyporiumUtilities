@@ -2,8 +2,13 @@
 # SAVEFILE SEARCHER
 ##########################################
 
+# Subheader
+TyporiumUtilities_Settings_UI_SaveFileRelated_OuiFileSearch_SubHeader= Save File Searcher
+
+# Open
 TyporiumUtilities_Settings_UI_SaveFileRelated_OuiFileSearch_Open= Open File Search Menu
 
+# InGame Dialog IDs
 TyporiumUtilities_OuiFileSearchBar_BigTitle= Search
 TyporiumUtilities_OuiFileSearchBar_Explanation= Save File Searcher
 
@@ -13,5 +18,11 @@ TyporiumUtilities_OuiFileSearchBar_Explanation= Save File Searcher
 # GAMEPLAY STATES
 ##########################################
 
+# Subheader
+TyporiumUtilities_Settings_Gameplay_States_SubHeader= Gameplay States
+
+# General
 TyporiumUtilities_Settings_Gameplay_States_ChangeState= Change Viewing State
+
+# Viewer State
 TyporiumUtilities_Settings_Gameplay_States_Viewer_HitboxTrailInSecond= Hitbox Trail Size

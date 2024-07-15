@@ -148,7 +148,7 @@ namespace Celeste.Mod.TyporiumUtilities.UI.SaveFile
 
                     for(int j = 0; j < area.Modes.Length; j++)
                     {
-                        // Checks if completed AND if there's playtime in the savefile
+                        // Checks if completed AND if there's playtime in the savefile (mostly for prologue)
                         bool has_played = area.Modes[j].TimePlayed > 100;
                         bool has_completed = area.Modes[j].Completed;
                         bool count_as_clear = has_completed && has_played;
