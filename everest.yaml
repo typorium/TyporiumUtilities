@@ -1,0 +1,6 @@
+- Name: TyporiumUtilities_DEV
+  Version: 1.1.0
+  DLL: Code/TyporiumUtilities_DEV.dll
+  Dependencies:
+    - Name: EverestCore
+      Version: 1.5577.0

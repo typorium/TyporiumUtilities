@@ -1,0 +1,27 @@
+modname_TyporiumUtilities_DEV= Typorium Utilities
+
+
+###########################################################
+# SAVEFILE SEARCHER
+###########################################################
+
+Typorium_TyporiumUtilities_Settings_Saves_SaveFileSearcher_SubMenu= SaveFile Searcher Menu
+Typorium_TyporiumUtilities_Settings_Saves_SaveFileSearcher_OuiOpen= Open savefile searcher menu
+
+Typorium_TyporiumUtilities_Saves_SaveFileSearcher_MenuTitle_Header= SaveFile Searcher
+
+
+###########################################################
+# SAVEFILE SWAPPER
+###########################################################
+
+Typorium_TyporiumUtilities_Settings_Saves_SaveFileSwapper_SubMenu= SaveFile Swapper Menu
+Typorium_TyporiumUtilities_Settings_Saves_SaveFileSwapper_OuiOpen= Toggle file-swapper mode
+
+
+###########################################################
+# SAVES OTHERS
+###########################################################
+
+Typorium_TyporiumUtilities_Settings_Saves_Others_SubMenu= Saves - Others
+Typorium_TyporiumUtilities_Settings_Saves_Others_DeleteEmptyOnStartup= Delete empty saves on startup
