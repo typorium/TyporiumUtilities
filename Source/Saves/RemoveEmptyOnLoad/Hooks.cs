@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.IO;
+using FMOD.Studio;
 
 namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.RemoveEmptyOnLoad
 {
@@ -10,33 +13,19 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.RemoveEmptyOnLoad
 
         public static void Load()
         {
-            On.Celeste.OuiFileSelect.LoadThread += Mod_LoadThread;
+            // On.Celeste.OuiFileSelect.Enter += Mod_Enter;
         }
 
         public static void Unload()
         {
-            On.Celeste.OuiFileSelect.LoadThread -= Mod_LoadThread;
+            // On.Celeste.OuiFileSelect.Enter -= Mod_Enter;
         }
 
 
-        public static void Mod_LoadThread(On.Celeste.OuiFileSelect.orig_LoadThread orig, OuiFileSelect self)
+        private static IEnumerator Mod_Enter(On.Celeste.OuiFileSelect.orig_Enter orig, OuiFileSelect self, Oui from)
         {
-
-            // Original actions
-            orig(self);
-
-            // For all savefile
-            int i = 0;
-            while (i < self.Slots.Length)
-            {
-
-                // If savefile is empty
-                if (!self.Slots[i].Exists)
-                {}
-
-            }
-
+            yield break;
         }
-        
+
     }
 }

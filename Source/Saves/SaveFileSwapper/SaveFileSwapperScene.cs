@@ -220,7 +220,7 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.SaveFileSwapper
                     Audio.Play("event:/ui/main/button_select");
 
                     // Swap files
-                    SavesFunctions.SwapFile(this.index_slot1, this.index_slot2, OuiInstance, TemporaryDirectoryname);
+                    SavesFunctions.SwapFile(this.index_slot1, this.index_slot2, OuiInstance);
                 }
             }
 
