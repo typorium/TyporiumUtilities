@@ -1,9 +1,10 @@
+using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using MonoMod.Utils;
 
-namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves
+namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities
 {
 
 
@@ -34,11 +35,12 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves
         // Checks if a save at index "slotindex" exists in the folder
         public static bool FilesExist(int slotindex)
         {
-            return SavesDirectoryInfo.EnumerateFiles().ToList().Count != 0;
+            string regex = GetRegexForSlot(slotindex);
+            return SavesDirectoryInfo.EnumerateFiles().Where(file => Regex.IsMatch(file.Name, regex)).ToList().Count != 0;
         }
 
         // Get a file's name without the index of the save
-        public static string GetFileNameWithoutSlotIndex(string filename)
+        private static string GetFileNameWithoutSlotIndex(string filename)
         {
             int index = filename.IndexOf("-");
             if (index == -1)
@@ -46,6 +48,21 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves
                 index = filename.IndexOf(".");
             }
             return filename.Substring(index);
+        }
+
+        // Get the slot index contained in the file's name
+        private static int GetSlotIndexWithoutFileName(string filename)
+        {
+            int index = filename.IndexOf("-");
+            if (index == -1)
+            {
+                index = filename.IndexOf(".");
+            }
+
+            int slotindex = -1;
+            int.TryParse(filename.Substring(0, index), out slotindex);
+
+            return slotindex;
         }
 
         // Get the index of the highest save referenced in the files
@@ -56,6 +73,7 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves
 
             foreach (var file in SavesDirectoryInfo.EnumerateFiles().Where(file => Regex.IsMatch(file.Name, regex)))
             {
+                maxslot = Math.Max(maxslot, GetSlotIndexWithoutFileName(file.Name));
             }
 
             return maxslot;
@@ -66,9 +84,9 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves
         {
             if (slotindex == null)
             {
-                return @"^([0-9]+)((?:-[A-Za-z]+)+)?\.celeste";
+                return @"^(\d+)(-mod(session|savedata|settings|save)(-([^.]+))?)?.celeste";
             }
-            return "^(" + slotindex.ToString() + @")((?:-[A-Za-z]+)+)?\.celeste";
+            return "^(" + slotindex.ToString() + @")(-mod(session|savedata|settings|save)(-([^.]+))?)?.celeste";
         }
 
         // Swaps all files that reference slotindex1 and slotindex2
@@ -87,7 +105,6 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves
             foreach (var fileinfo in SavesDirectoryInfo.EnumerateFiles().Where(file => Regex.IsMatch(file.Name, regex_slot1)))
             {
                 string newfilename = $"{slotindex2}{GetFileNameWithoutSlotIndex(fileinfo.Name)}";
-                Logger.Log(LogLevel.Info, "typorium_utilities", fileinfo.Name + "    " + newfilename);
                 fileinfo.MoveTo($"{SavesDirectoryInfo.FullName}/{temporary_folder}/{newfilename}");
             }
 

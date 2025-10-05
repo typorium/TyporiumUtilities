@@ -2,7 +2,7 @@ using System.Collections;
 using Celeste.Mod.TyporiumUtilities_DEV.Utilities.UIElements;
 using Microsoft.Xna.Framework;
 using Monocle;
-using Celeste.Mod.TyporiumUtilities_DEV.Utilities.Saves;
+using Celeste.Mod.TyporiumUtilities_DEV.Utilities;
 
 
 namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.SaveFileSwapper
