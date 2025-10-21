@@ -26,6 +26,8 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.RemoveEmptyOnEnter
         private static IEnumerator Mod_Enter(On.Celeste.OuiFileSelect.orig_Enter orig, OuiFileSelect self, Oui from)
         {
 
+            bool have_files_been_deleted = false;
+
             // The highest saveslot
             if (TyporiumUtilities_DEVModule.Settings.RemoveEmptySavesOnEnter)
             {
@@ -56,6 +58,7 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.RemoveEmptyOnEnter
                             // If a non-empty file is found, swap the empty one with the non-empty one 
                             if (Utilities.SavesFunctions.FilesExist(nonempty_index))
                             {
+                                have_files_been_deleted = true;
                                 Utilities.SavesFunctions.SwapFile(nonempty_index, empty_index, null);
                                 break;
                             }
@@ -70,7 +73,31 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.RemoveEmptyOnEnter
                 }
             }
 
+            // If at least one file has been deleted, reload the UI slots
+            if (have_files_been_deleted)
+            {
 
+                // Removes each UI slots
+                for (int i = 0; i < self.Slots.Length; i++)
+                {
+                    if (self.Slots[i] == null)
+                    {
+                        continue;
+                    }
+
+                    self.Slots[i].RemoveSelf();
+                    self.Slots[i] = null;
+                }
+
+                // Forces the OUI to reload
+                OuiFileSelect.Loaded = false;
+                self.SlotSelected = false;
+                self.SlotIndex = 0;
+                self.HasSlots = false;
+                self.loadedSuccess = false;
+
+            }
+            
             // Do the original method's purpose
             IEnumerator origEnum = orig(self, from);
             while (origEnum.MoveNext()) yield return origEnum.Current;
