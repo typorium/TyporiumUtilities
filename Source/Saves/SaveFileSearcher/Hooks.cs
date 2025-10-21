@@ -29,7 +29,7 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Saves.SaveFileSearcher
 
             // If appropriate menu button is pressed, go to menu
             ButtonBinding bind = TyporiumUtilities_DEVModule.Settings.SaveFileSearcher_OpenOui_Bind;
-            if (bind.Pressed && self.Selected)
+            if (bind != null && bind.Pressed && self.Selected)
             {
                 bind.ConsumePress();
                 self.Overworld.Goto<SaveFileSearcherOui>();

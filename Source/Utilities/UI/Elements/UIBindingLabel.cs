@@ -34,18 +34,6 @@ namespace Celeste.Mod.TyporiumUtilities_DEV.Utilities.UIElements
         }
 
 
-        public Rectangle GetBounds()
-        {
-            MTexture mTexture = Input.GuiButton(this.bind, Input.PrefixMode.Latest, "controls/keyboard/oemquestion");
-            Vector2 textsize = ActiveFont.Measure(this.label);
-
-            float width = (mTexture.Width + this.margin + textsize.X) * this.scale;
-            float height = Math.Max(mTexture.Height, textsize.Y) * this.scale;
-
-            return new Rectangle((int)this.Position.X, (int)this.Position.Y, (int)width, (int)height);
-        }
-
-
         public void SetLabel(string label)
         {
             this.label = label;

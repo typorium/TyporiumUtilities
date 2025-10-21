@@ -2,20 +2,29 @@ modname_TyporiumUtilities_DEV= Typorium Utilities
 
 
 ###########################################################
+# COLLAB UTILS 2 - OPEN JOURNAL ANYWHERE
+###########################################################
+
+Typorium_TyporiumUtilities_Settings_CollabUtils2_OpenJournalAnywhere_SubMenu= Collab Utils 2 - Open Journal in Lobby
+
+Typorium_TyporiumUtilities_Settings_CollabUtils2_OpenJournalAnywhere_Bind= Open Journal in Lobby
+
+
+###########################################################
 # SAVEFILE SEARCHER
 ###########################################################
 
-Typorium_TyporiumUtilities_Settings_Saves_SaveFileSearcher_SubMenu= SaveFile Searcher Menu
+Typorium_TyporiumUtilities_Settings_Saves_SaveFileSearcher_SubMenu= Savefile Searcher Menu
 Typorium_TyporiumUtilities_Settings_Saves_SaveFileSearcher_OuiOpen= Open savefile searcher menu
 
-Typorium_TyporiumUtilities_Saves_SaveFileSearcher_MenuTitle_Header= SaveFile Searcher
+Typorium_TyporiumUtilities_Saves_SaveFileSearcher_MenuTitle_Header= Savefile Searcher
 
 
 ###########################################################
 # SAVEFILE SWAPPER
 ###########################################################
 
-Typorium_TyporiumUtilities_Settings_Saves_SaveFileSwapper_SubMenu= SaveFile Swapper Menu
+Typorium_TyporiumUtilities_Settings_Saves_SaveFileSwapper_SubMenu= Savefile Swapper Menu
 Typorium_TyporiumUtilities_Settings_Saves_SaveFileSwapper_OuiOpen= Toggle file-swapper mode
 
 
@@ -23,5 +32,5 @@ Typorium_TyporiumUtilities_Settings_Saves_SaveFileSwapper_OuiOpen= Toggle file-s
 # SAVES OTHERS
 ###########################################################
 
-Typorium_TyporiumUtilities_Settings_Saves_Others_SubMenu= Saves - Others
-Typorium_TyporiumUtilities_Settings_Saves_Others_DeleteEmptyOnStartup= Delete empty saves on startup
+Typorium_TyporiumUtilities_Settings_Saves_Others_SubMenu= Others
+Typorium_TyporiumUtilities_Settings_Saves_Others_RemoveEmptySavesOnEnter= Delete empty saves when entering file menu
